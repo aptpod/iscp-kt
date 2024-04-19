@@ -18,7 +18,7 @@ iSCP Client for Kotlin は、iSCP version 2を用いたリアルタイムAPIに�
 dependencies {
     ...
     // Install iSCP
-    implementation 'com.aptpod.github:iscp:0.11.0'
+    implementation 'com.aptpod.github:iscp:1.0.0'
 }
 ```
 
@@ -179,7 +179,7 @@ fun ExampleActivity.startUpstream() {
                 baseTime = BaseTime(
                     sessionId = sessionId,
                     name = "manual",
-                    priority = 1000,
+                    priority = 80,
                     elapsedTime = 0,
                     baseTime = baseTime),
                 persist = upstreamPersist,
