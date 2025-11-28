@@ -18,7 +18,7 @@ iSCP Client for Kotlin は、iSCP version 2を用いたリアルタイムAPIに�
 dependencies {
     ...
     // Install iSCP
-    implementation 'com.aptpod.github:iscp:1.0.0'
+    implementation 'com.aptpod.github:iscp:1.1.0'
 }
 ```
 
@@ -46,8 +46,8 @@ dependencyResolutionManagement {
 import android.app.Activity
 import com.aptpod.iscp.connection.Connection
 import com.aptpod.iscp.connection.ConnectionCallbacks
-import com.aptpod.iscp.transport.ITransportConfig
-import com.aptpod.iscp.transport.WebSocketConfig
+import com.aptpod.iscp.transport.IConnector
+import com.aptpod.iscp.transport.websocket.WebSocketConnector
 
 class ExampleActivity : Activity() {
     /**
@@ -86,10 +86,10 @@ class ExampleActivity : Activity() {
             address = urls[1]
         }
         // WebSocketを使って接続するように指定します。
-        var transportConfig: ITransportConfig = WebSocketConfig(enableTls = enableTls)
+        var connector: IConnector = WebSocketConnector(enableTls = enableTls)
         Connection.connectAsync(
             address = address,
-            transportConfig = transportConfig,
+            connector = connector,
             tokenSource = {
                 // アクセス用のトークンを指定します。接続時に発生するイベントにより使用されます。
                 // ここでは固定のトークンを返していますが随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
@@ -179,7 +179,7 @@ fun ExampleActivity.startUpstream() {
                 baseTime = BaseTime(
                     sessionId = sessionId,
                     name = "manual",
-                    priority = 80,
+                    priority = 60,
                     elapsedTime = 0,
                     baseTime = baseTime),
                 persist = upstreamPersist,
@@ -389,10 +389,10 @@ fun E2ECallExampleActivity.connectForController() {
         address = urls[1]
     }
     // WebSocketを使って接続するように指定します。
-    var transportConfig: ITransportConfig = WebSocketConfig(enableTls = enableTls)
+    var connector: IConnector = WebSocketConnector(enableTls = enableTls)
     Connection.connectAsync(
         address = address,
-        transportConfig = transportConfig,
+        connector = connector,
         tokenSource = {
             // アクセス用のトークンを指定します。接続時に発生するイベントにより使用されます。
             // ここでは固定のトークンを返していますが随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
@@ -448,10 +448,10 @@ fun E2ECallExampleActivity.connectForTarget() {
         address = urls[1]
     }
     // WebSocketを使って接続するように指定します。
-    var transportConfig: ITransportConfig = WebSocketConfig(enableTls = enableTls)
+    var connector: IConnector = WebSocketConnector(enableTls = enableTls)
     Connection.connectAsync(
         address = address,
-        transportConfig = transportConfig,
+        connector = connector,
         tokenSource = {
             // アクセス用のトークンを指定します。接続時に発生するイベントにより使用されます。
             // ここでは固定のトークンを返していますが随時トークンの更新を行う実装にするとトークンの期限切れを考える必要がなくなります。
