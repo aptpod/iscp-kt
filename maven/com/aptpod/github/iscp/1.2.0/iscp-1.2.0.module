@@ -1,0 +1,143 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.aptpod.github",
+    "module": "iscp",
+    "version": "1.2.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.9"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "iscp-1.2.0.jar",
+          "url": "iscp-1.2.0.jar",
+          "size": 1439444,
+          "sha512": "fc1e96d8b3248938c6afb92cde8200614cd81c0a40f9e23d32beffed6df3d991f78c735550dddab2bae3a8db6981c49c15a470f0ef580e8d3df3378c1ad09cf5",
+          "sha256": "15813af199910d6fa373d37495aa092d5eddd93675f334e6db1d400996227fd1",
+          "sha1": "dc5d892a16faed1a0689be39ec817505128d8b50",
+          "md5": "144e9182ca0ffd83442beddc5c657f84"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.protobuf",
+          "module": "protobuf-java",
+          "version": {
+            "requires": "3.23.3"
+          }
+        },
+        {
+          "group": "com.google.protobuf",
+          "module": "protobuf-java-util",
+          "version": {
+            "requires": "3.23.3"
+          }
+        },
+        {
+          "group": "org.java-websocket",
+          "module": "Java-WebSocket",
+          "version": {
+            "requires": "1.5.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "iscp-1.2.0.jar",
+          "url": "iscp-1.2.0.jar",
+          "size": 1439444,
+          "sha512": "fc1e96d8b3248938c6afb92cde8200614cd81c0a40f9e23d32beffed6df3d991f78c735550dddab2bae3a8db6981c49c15a470f0ef580e8d3df3378c1ad09cf5",
+          "sha256": "15813af199910d6fa373d37495aa092d5eddd93675f334e6db1d400996227fd1",
+          "sha1": "dc5d892a16faed1a0689be39ec817505128d8b50",
+          "md5": "144e9182ca0ffd83442beddc5c657f84"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iscp-1.2.0-javadoc.jar",
+          "url": "iscp-1.2.0-javadoc.jar",
+          "size": 1548064,
+          "sha512": "167b7ce3bfa6837dce8b60d71c597d8de554c6360d95d76bb8b58b02eceed5915754be2681361d5a97ea7d46db5365837d22596330bd9f34d2d42f6e9b4e6939",
+          "sha256": "2bed53748b2b38d25a45a3ff25021cf05629fc42dafff1fdd875b74254959544",
+          "sha1": "0a750d4cbc8ee419bdd296da263d27e1b8d62a48",
+          "md5": "70ee7a502c9666ba50048d9dea296496"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "iscp-1.2.0-sources.jar",
+          "url": "iscp-1.2.0-sources.jar",
+          "size": 499889,
+          "sha512": "6144a9eb718309e7946272adf2c6df5420c56117113b2dcd215059532eb7e038e83a896f4301783443ea1701403b84dedbb3b0d0e7a73b181d7bc370934273a9",
+          "sha256": "e15b532aa37aa65cd27e1959cc009577b81be4938b8e69b1cde19306c4929ebb",
+          "sha1": "03eb0f68b3d391484abc970f60596d1218ec6d94",
+          "md5": "70ad4798091fb10cb273ed7cc90253fe"
+        }
+      ]
+    }
+  ]
+}
