@@ -18,7 +18,7 @@ iSCP Client for Kotlin は、iSCP version 2を用いたリアルタイムAPIに�
 dependencies {
     ...
     // Install iSCP
-    implementation 'com.aptpod.github:iscp:1.2.0'
+    implementation 'com.aptpod.github:iscp:1.2.1'
 }
 ```
 
